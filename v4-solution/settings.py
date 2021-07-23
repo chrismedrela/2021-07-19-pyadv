@@ -7,6 +7,12 @@ class Settings(BaseSettings):
     class Config:
         secrets_dir = 'secrets/'  # use "/run/secrets" on docker
 
+    # @classmethod
+    # def getInstance(cls):
+    #     if not hasattr(cls, 'settings'):
+    #         cls.settings = Settings()
+    #     return cls.settings
+
 __settings = None
 
 def get_settings() -> Settings:
